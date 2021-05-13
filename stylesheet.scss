@@ -1,20 +1,16 @@
 @charset "UTF-8";
 @mixin phone {
-  @media screen and (max-width: 700px) {  @content  }
+  @media screen and (max-width: 896px) {  @content  }
 }
 body{
-  font-family: "wigwag-bold","筑紫B丸ゴシック", sans-serif;
+  font-family: "Raleway", sans-serif;
   margin: 0 auto;
   text-align: center;
   letter-spacing: 0em;
+  line-height: 1.1;
   font-weight: normal;
-  color: #000;
-  @include phone {
-    overflow-x: hidden;
-    &.noscroll{
-      overflow: hidden;
-    }
-  }
+  color: #333;
+  font-size: 62.5%;
 }
 a{
   text-decoration: none;
@@ -33,4 +29,43 @@ ul,li,p{
   background-position: right bottom;
   margin: 0;
   text-transform: uppercase;
+}
+
+.wrapper{
+  width: 90.67%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/*****ヘッダー*****/
+.header{
+  padding-top: 46px;
+  .logo{
+    widows: 189px;
+  }
+  .header-nav{
+    display: flex;
+    justify-content: space-between;
+  }
+  &::after{
+    display: block;
+    height: 1px;
+    content: "";
+    max-width: 1000px;
+    margin-top: 22.5px;
+    border-bottom: 1px solid #c3c3c3;
+  }
+}
+.main-nav,.sub-nav{
+  padding-top: 40px;
+  &__list{
+    display: flex;
+    font-size: 1.6em;
+    }
+}
+.main-nav__item{
+  padding-right: 15px;
+}
+.sub-nav__item{
+  padding-left: 15px;
 }
