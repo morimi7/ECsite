@@ -1,7 +1,13 @@
 @charset "UTF-8";
+
+/***変数***/
+$text: 1.2em;
+$border: 1px solid #c3c3c3;
+
 @mixin phone {
   @media screen and (max-width: 896px) {  @content  }
 }
+
 body{
   font-family: "Raleway", sans-serif;
   margin: 0 auto;
@@ -65,7 +71,7 @@ ul,li,p{
     content: "";
     width: 100%;
     margin-top: 20px;
-    border-bottom: 1px solid #c3c3c3;
+    border-bottom: $border;
     @include phone{
       display: none;
     }
@@ -78,7 +84,7 @@ ul,li,p{
   }
   &__list{
     display: flex;
-    font-size: 1.2em;
+    font-size: $text;
     }
 }
 .main-nav__item{
@@ -115,8 +121,8 @@ ul,li,p{
   }
   &__title{
     display: block;
-    border-bottom: 1px solid #c3c3c3;
-    border-top: 1px solid #c3c3c3;;
+    border-bottom: $border;
+    border-top: $border;
     line-height: 60px;
     font-weight: bold;
     font-size: 1.6em;
@@ -129,23 +135,23 @@ ul,li,p{
   &__text{
     padding-top: 15px;
     text-align: left;
-    font-size: 1.2em;
+    font-size: $text;
     line-height: 22px;
   }
   &__price{
     padding-top: 30px;
-    font-size: 1.2em;
+    font-size: $text;
     text-align: left;
     text-transform: none;
   }
 }
 .number-table{
   border-collapse: collapse;
-  font-size: 1.2em;
+  font-size: $text;
   margin: 32px auto 0 auto;
   min-width: 340px;
   &__row{
-    border-bottom: 1px solid #c3c3c3;
+    border-bottom: $border;
     line-height: 37px;
   }
   &__row:nth-child(4){
@@ -156,8 +162,8 @@ ul,li,p{
     font-weight: normal;
   }
   &__title:nth-child(2){
-    border-left: 1px solid #c3c3c3;
-    border-right: 1px solid #c3c3c3;
+    border-left: $border;
+    border-right: $border;
   }
   &__color{
     width: 94px;
@@ -165,8 +171,8 @@ ul,li,p{
   }
   &__size{
     width: 66px;
-    border-left: 1px solid #c3c3c3;
-    border-right: 1px solid #c3c3c3;
+    border-left: $border;
+    border-right: $border;
   }
   &__pulldown{
     max-width: 180px;
@@ -176,7 +182,7 @@ ul,li,p{
   }
   &__pullbutton{
     appearance: none;
-    border: 1px solid #c3c3c3;
+    border: $border;
     width: 140px;
     height: 20px;
     background-image: url(img/select@2x.png);
@@ -194,7 +200,7 @@ ul,li,p{
   background: #333;
   &__body{
     color: #fff;
-    font-size: 1.2em;
+    font-size: $text;
     line-height: 48px;
   }
 }
@@ -202,24 +208,24 @@ ul,li,p{
 .size-table{
   margin: 30px auto 0 auto;
   border-collapse: collapse;
-  font-size: 1.2em;
+  font-size: $text;
   max-width: 340px;
   &__row{
     line-height: 35px;
   }
   &__title{
-    border: 1px solid #c3c3c3;
+    border: $border;
     text-transform: none;
     font-weight: normal;
     background: #ecebeb;
   }
   &__size{
-    border: 1px solid #c3c3c3;
+    border: $border;
     width: 52px;
     background: #ecebeb;
   }
   &__date{
-    border: 1px solid #c3c3c3;
+    border: $border;
     width: 96px;
   }
 }
