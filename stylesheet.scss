@@ -33,39 +33,202 @@ ul,li,p{
 
 .wrapper{
   width: 90.67%;
-  max-width: 800px;
+  /*max-width: 800px;*/
   margin: 0 auto;
 }
 
 /*****ヘッダー*****/
 .header{
   padding-top: 46px;
+  max-width: 1000px;
+  margin: 0 auto;
+  @include phone{
+    padding-top: 36px;
+  }
   .logo{
     widows: 189px;
   }
   .header-nav{
     display: flex;
+    max-width: 800px;
+    margin: 0 auto;
     justify-content: space-between;
+    @include phone{
+      overflow-x: auto;
+      white-space: nowrap;
+      overflow-scrolling: touch;
+    }
   }
   &::after{
     display: block;
     height: 1px;
     content: "";
-    max-width: 1000px;
-    margin-top: 22.5px;
+    width: 100%;
+    margin-top: 20px;
     border-bottom: 1px solid #c3c3c3;
+    @include phone{
+      display: none;
+    }
   }
 }
 .main-nav,.sub-nav{
-  padding-top: 40px;
+  padding-top: 35px;
+  @include phone{
+    padding-top: 25.5px;
+  }
   &__list{
     display: flex;
-    font-size: 1.6em;
+    font-size: 1.2em;
     }
 }
 .main-nav__item{
-  padding-right: 15px;
+  padding-right: 14px;
 }
 .sub-nav__item{
   padding-left: 15px;
+}
+
+/****メイン****/
+.item{
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  @include phone{
+    margin-top: 18px;
+    flex-direction: column;
+  }
+}
+.item-image{
+  margin-right: 60px;
+  flex-shrink: 0;
+  width: 50%;
+  @include phone{
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
+  }
+}
+.item-info{
+  width: 50%;
+  @include phone{
+    width: 100%;
+  }
+  &__title{
+    display: block;
+    border-bottom: 1px solid #c3c3c3;
+    border-top: 1px solid #c3c3c3;;
+    line-height: 60px;
+    font-weight: bold;
+    font-size: 1.6em;
+    text-align: left;
+    text-transform: none;
+    @include phone{
+      margin-top: 10px;
+    }
+  }
+  &__text{
+    padding-top: 15px;
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 22px;
+  }
+  &__price{
+    padding-top: 30px;
+    font-size: 1.2em;
+    text-align: left;
+    text-transform: none;
+  }
+}
+.number-table{
+  border-collapse: collapse;
+  font-size: 1.2em;
+  margin: 32px auto 0 auto;
+  min-width: 340px;
+  &__row{
+    border-bottom: 1px solid #c3c3c3;
+    line-height: 37px;
+  }
+  &__row:nth-child(4){
+    border-bottom: none;
+  }
+  &__title{
+    text-transform: none;
+    font-weight: normal;
+  }
+  &__title:nth-child(2){
+    border-left: 1px solid #c3c3c3;
+    border-right: 1px solid #c3c3c3;
+  }
+  &__color{
+    width: 94px;
+    text-transform: none;
+  }
+  &__size{
+    width: 66px;
+    border-left: 1px solid #c3c3c3;
+    border-right: 1px solid #c3c3c3;
+  }
+  &__pulldown{
+    max-width: 180px;
+    @include phone{
+    width: calc(100% - 94px -66px);
+    }
+  }
+  &__pullbutton{
+    appearance: none;
+    border: 1px solid #c3c3c3;
+    width: 140px;
+    height: 20px;
+    background-image: url(img/select@2x.png);
+    background-size: 14px 12px;
+    background-position: right 4px top 2px;
+    padding-left: 7px;
+  }
+}
+
+.button{
+  margin: 19px auto 0 auto;
+  max-width: 340px;
+  height: 48px;
+  display: block;
+  background: #333;
+  &__body{
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 48px;
+  }
+}
+
+.size-table{
+  margin: 30px auto 0 auto;
+  border-collapse: collapse;
+  font-size: 1.2em;
+  max-width: 340px;
+  &__row{
+    line-height: 35px;
+  }
+  &__title{
+    border: 1px solid #c3c3c3;
+    text-transform: none;
+    font-weight: normal;
+    background: #ecebeb;
+  }
+  &__size{
+    border: 1px solid #c3c3c3;
+    width: 52px;
+    background: #ecebeb;
+  }
+  &__date{
+    border: 1px solid #c3c3c3;
+    width: 96px;
+  }
+}
+
+/****フッター****/
+.footer{
+  margin-top: 196px;
+  margin-bottom: 16px;
+  @include phone{
+    margin-top: 108px;
+  }
 }
